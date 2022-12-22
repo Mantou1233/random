@@ -1,10 +1,9 @@
 function __random__number__(n: number, nmax?: number) {
     let min, max;
-    if(nmax === undefined){
+    if (nmax === undefined) {
         min = 0;
         max = n;
-    }
-    else {
+    } else {
         min = n;
         max = nmax;
     }
@@ -16,7 +15,7 @@ function __random__element__<T>(arr: T[]): T {
 }
 
 function random<T>(arr: T[]): T;
-function random<T, N extends number = 1>(arr: T[], amount: N): (T[] & { length: N });
+function random<T, N extends number = 1>(arr: T[], amount: N): T[] & { length: N };
 function random(min: number, max?: number): number;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function random<T>(...args: [arg0: T[] | number, arg1?: number]): T[] | T | number {

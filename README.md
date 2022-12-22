@@ -14,11 +14,7 @@ usag
 
 ```ts
 // eslint-disable-next-line @typescript-eslint/no-var-requires (for typefuck usrs)
-globalThis.random = require("@hikariware/random");
-/*
-globalThis.choose = require("hikariware/random").choose // as typeof import("hikariware/random");
-if you want to use choose
-*/
+globalThis.random = require("@hikariware/random") // as typeof import("hikariware/random").random;
 ```
 
 doc
@@ -26,6 +22,5 @@ doc
 ```ts
 random(min: number, max: number): number;
 random<T>(arr: T[]): T;
-random<T, N = 1>(arr: T[], amount: N = 1): (T[] & {length: N}) | T;
-
+random<T, N = 1>(arr: T[], amount: N): (T[] & {length: N});
 ```

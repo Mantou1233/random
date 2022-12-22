@@ -1,6 +1,6 @@
 {
   "name": "@hikariware/random",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fucking useless $random #2022 tech# made with love and randomish",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
