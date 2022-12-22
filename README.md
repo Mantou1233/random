@@ -28,6 +28,4 @@ random(min: number, max: number): number;
 random<T>(arr: T[]): T;
 random<T, N = 1>(arr: T[], amount: N = 1): (T[] & {length: N}) | T;
 
-choose();
-
 ```

@@ -47,7 +47,7 @@
     "url": "git+https://github.com/Mantou1233/random.git"
   },
   "keywords": [
-    "ms"
+    "random"
   ],
   "author": "Mantou1233",
   "license": "ISC",
@@ -55,7 +55,8 @@
     "url": "https://github.com/Mantou1233/random/issues"
   },
   "homepage": "https://github.com/Mantou1233/random#readme",
-  "dependencies": {
-    "pretty-ms": "^8.0.0"
+  "dependencies": {},
+  "directories": {
+    "test": "tests"
   }
 }

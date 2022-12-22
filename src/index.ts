@@ -1,4 +1,4 @@
-export function __random__number__(n: number, nmax?: number) {
+function __random__number__(n: number, nmax?: number) {
     let min, max;
     if(nmax === undefined){
         min = 0;
@@ -11,7 +11,7 @@ export function __random__number__(n: number, nmax?: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-export function __random__element__<T>(arr: T[]): T {
+function __random__element__<T>(arr: T[]): T {
     return arr[__random__number__(arr.length - 1)];
 }
 
@@ -19,7 +19,7 @@ function random<T>(arr: T[]): T;
 function random<T, N extends number = 1>(arr: T[], amount: N): (T[] & { length: N });
 function random(min: number, max?: number): number;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function random<T>(...args: [arg0: T[] | number, arg1?: number, ...restful: any[]]): T[] | T | number {
+function random<T>(...args: [arg0: T[] | number, arg1?: number]): T[] | T | number {
     if (args.length === 1) {
         if (Array.isArray(args[0])) {
             return __random__element__(args[0]);
@@ -53,4 +53,5 @@ function weightedChoose(...args: any[]) {
 
     return args[0];
 }
+export default random;
 export { random, weightedChoose };
